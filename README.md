@@ -46,9 +46,7 @@ Click the link below to create a copy of this project in your GitHub account.
 👉 **[Click here to Fork](../../fork)**
 
 ### Step 2: Deploy to Cloudflare
-![deploy on cf pages](https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-F38020?style=flat-square&logo=cloudflare)
-1. Go to the Cloudflare Dashboard using this direct link:  
-   👉 **[Create Cloudflare Pages Project](https://dash.cloudflare.com?to=/:account/pages/new/provider/github)**
+1. Go to the Cloudflare Dashboard using this direct link: **[![deploy on cf pages](https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-F38020?style=flat-square&logo=cloudflare)](https://dash.cloudflare.com?to=/:account/pages/new/provider/github)**
    
 2. Select your GitHub account and choose the **EverLink** repository you just forked.
 3. Click **Begin setup**.
