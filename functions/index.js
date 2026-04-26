@@ -12,7 +12,7 @@ export async function onRequest(context) {
   let finalUrl = target;
   // 2. Smart Logic: If it doesn't look like a URL, treat it as a Discord Invite Code
   // Example: "abc1234" becomes "https://discord.gg/abc1234"
-  const KNOWN_SCHEMES = ["http://", "https://", "ftp://", "file://", "data:", "mailto:", "tel:"];
+  const KNOWN_SCHEMES = ["http://", "https://", "ftp://", "data:", "mailto:", "tel:"];
   const lower = finalUrl.toLowerCase();
   const looksLikeUrl = KNOWN_SCHEMES.some((s) => lower.startsWith(s));
   if (!looksLikeUrl) {
