@@ -31,7 +31,8 @@ With **EverLink**, you deploy your own redirect service. You can use the free su
 
 - **🚀 Serverless Speed:** Runs on Cloudflare's Global Edge Network (latency is near zero).
 - **⚡ Smart 307 Redirects:** Uses `HTTP 307 Temporary Redirect`. Browsers and bots will **never cache** the destination. Changes are reflected instantly.
-- **🤖 Discord Smart-Detect:** While it works for **any URL**, it has a special feature for Discord. Just paste the invite code (e.g., `ezDq3s`), and it automatically formats it to `https://discord.gg/ezDq3s`.
+- **🤖 Smart URL Handling:** Accepts full URLs (https, ftp, mailto, etc.) automatically. 
+  If input is not a valid URL, it is treated as a Discord invite code.
 - **💸 100% Free:** Runs entirely on the Cloudflare Pages Free Tier.
 
 ---
@@ -62,7 +63,12 @@ In the build settings page, fill in the following details:
 5. Scroll down and open the **Environment variables (advanced)** tab.
 6. Click **Add variable** and enter:
    - **Variable name:** `TARGET_URL`
-   - **Value:** Your Discord invite code (e.g., `AbCd123`) OR any full URL (e.g., `https://google.com`).
+   - **Value:**
+     - A full valid URL (e.g., https://tata.com)
+     - OR a Discord invite code (e.g., AbCd123)
+
+If the value is not a valid URL, it will automatically be converted to:
+https://discord.gg/<your-code>
 
 7. Click **Save and Deploy**.
 
